@@ -6,7 +6,7 @@ from lxml.html import fromstring
 from pync import Notifier
 
 ENDPOINT = 'http://obmenka.kharkov.ua/'
-TIMEOUT = 5
+TIMEOUT = 60
 XPATH = '/html/body/div[2]/div[2]/div[1]/table/tbody/tr[1]/td[5]'
 TITLE = 'UAH per USD'
 
