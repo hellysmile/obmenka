@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import logging
 import time
 
 import requests
@@ -20,8 +21,8 @@ def main():
             tree = fromstring(html)
             el = tree.xpath(XPATH)[0]
             value = float(el.text.replace(',', '.'))
-        except Exception:
-            pass
+        except Exception as e:
+            logging.exception(e)
         else:
             if last_currency != value:
                 last_currency = value
@@ -32,8 +33,8 @@ def main():
                         open=ENDPOINT,
                         title=str(value)
                     )
-                except Exception:
-                    pass
+                except Exception as e:
+                    logging.exception(e)
         finally:
             time.sleep(TIMEOUT)
 
