@@ -13,14 +13,15 @@ Installation Mac OS X:
 
     brew install libxml2 libxslt
 
-    sudo pip install virtualenv
+    sudo pip install obmenka
 
 Usage:
 ******
 
 .. code-block:: bash
 
-    virtualenv env
-    source env/bin/activate
-    pip install -r requirements.txt
-    python main.py
+    # optional
+    # virtualenv env
+    # source env/bin/activate
+
+    obmenka
