@@ -29,7 +29,8 @@ def main():
                     Notifier.notify(
                         TITLE,
                         open=ENDPOINT,
-                        title=str(value)
+                        title=str(value),
+                        sender='com.apple.Safari'
                     )
 
                     last_currency = value
