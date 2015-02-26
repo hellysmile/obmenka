@@ -15,13 +15,15 @@ def main():
     last_currency = None
 
     while True:
+        time.sleep(TIMEOUT)
+
         try:
             html = requests.get(ENDPOINT).text
             tree = fromstring(html)
             el = tree.xpath(XPATH)[0]
             value = float(el.text.replace(',', '.'))
         except Exception:
-            pass
+            continue
 
         if last_currency != value:
             last_currency = value
@@ -34,8 +36,6 @@ def main():
                 )
             except Exception:
                 pass
-
-        time.sleep(TIMEOUT)
 
 
 if __name__ == '__main__':
