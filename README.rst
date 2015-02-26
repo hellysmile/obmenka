@@ -3,7 +3,7 @@ Installation Mac OS X:
 
 .. code-block:: bash
 
-    brew brew install libxml2 libxslt
+    brew install libxml2 libxslt
 
     sudo pip install virtualenv
 
