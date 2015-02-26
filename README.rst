@@ -1,3 +1,11 @@
+obmenka tracker
+===============
+
+:info: Keep Calm and Buy the USD
+
+.. image:: https://www.dropbox.com/s/x8n98g22cmtdf7f/Screenshot%202015-02-26%2014.14.15.png?dl=0
+    :target: http://obmenka.kharkov.ua/
+
 Installation Mac OS X:
 **********************
 
