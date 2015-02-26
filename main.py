@@ -25,14 +25,14 @@ def main():
             logging.exception(e)
         else:
             if last_currency != value:
-                last_currency = value
-
                 try:
                     Notifier.notify(
                         TITLE,
                         open=ENDPOINT,
                         title=str(value)
                     )
+
+                    last_currency = value
                 except Exception as e:
                     logging.exception(e)
         finally:
