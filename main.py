@@ -15,27 +15,27 @@ def main():
     last_currency = None
 
     while True:
-        time.sleep(TIMEOUT)
-
         try:
             html = requests.get(ENDPOINT).text
             tree = fromstring(html)
             el = tree.xpath(XPATH)[0]
             value = float(el.text.replace(',', '.'))
         except Exception:
-            continue
+            pass
+        else:
+            if last_currency != value:
+                last_currency = value
 
-        if last_currency != value:
-            last_currency = value
-
-            try:
-                Notifier.notify(
-                    TITLE,
-                    open=ENDPOINT,
-                    title=str(value)
-                )
-            except Exception:
-                pass
+                try:
+                    Notifier.notify(
+                        TITLE,
+                        open=ENDPOINT,
+                        title=str(value)
+                    )
+                except Exception:
+                    pass
+        finally:
+            time.sleep(TIMEOUT)
 
 
 if __name__ == '__main__':
