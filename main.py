@@ -2,7 +2,6 @@
 import time
 
 import requests
-
 from lxml.html import fromstring
 from pync import Notifier
 
