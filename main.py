@@ -21,8 +21,7 @@ def main():
             el = tree.xpath(XPATH)[0]
             value = float(el.text.replace(',', '.'))
         except Exception:
-            time.sleep(TIMEOUT)
-            continue
+            pass
 
         if last_currency != value:
             last_currency = value
