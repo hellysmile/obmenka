@@ -9,7 +9,7 @@ from pync import Notifier
 ENDPOINT = 'http://obmenka.kharkov.ua/'
 TIMEOUT = 5
 XPATH = '/html/body/div[2]/div[2]/div[1]/table/tbody/tr[1]/td[5]'
-TITLE = 'currency UAH per USD'
+TITLE = 'UAH per USD'
 
 
 def main():
@@ -30,9 +30,9 @@ def main():
 
             try:
                 Notifier.notify(
-                    str(value),
+                    TITLE,
                     open=ENDPOINT,
-                    title=TITLE
+                    title=str(value)
                 )
             except Exception:
                 pass
