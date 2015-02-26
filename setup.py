@@ -24,7 +24,7 @@ def long_description():
 
 setup(
     name='obmenka',
-    version='0.1',
+    version='0.2',
     py_modules=py_modules,
     description=description,
     long_description=long_description(),
