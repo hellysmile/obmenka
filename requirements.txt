@@ -1,4 +1,4 @@
-lxml==3.4.2
+lxml==4.6.2
 pync==1.6.1
 python-dateutil==2.4.0
 requests==2.5.3
